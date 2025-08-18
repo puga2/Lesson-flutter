@@ -95,43 +95,18 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          color: Colors.black38,
-          // height: double.infinity,
-          // width: double.infinity,
-          child: Row(
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                height: 100.0,
-                width: 100.0,
-                // padding: EdgeInsets.all(50.0),
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.red,
-                ),
-                child: Center(
-                  child: Text(
-                    "Hello brodo",
-                    style: TextStyle(color: Colors.blue, fontSize: 11.0),
-                  ),
-                ),
-              ),
-              Container(
-                height: 100.0,
-                width: 100.0,
-                padding: EdgeInsets.all(50.0),
-                margin: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: Colors.red,
-                ),
-              ),
-            ],
-          ),
+      body: Container(
+        padding: EdgeInsets.all(50.0),
+        child: Stack(
+          children: [
+            Image.asset(
+              'assets/images/bg.jpg',
+              // height: double.infinity,
+              fit: BoxFit.cover,
+              height: 300,
+            ),
+            SizedBox(height: 300, child: Center(child: Text('Flutter'))),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
