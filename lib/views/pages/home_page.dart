@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/constants.dart';
+import 'package:flutter_application_1/views/widgets/hero_widget.dart';
 import 'package:lottie/lottie.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +12,8 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Column(
         children: [
-          Lottie.asset('assets/lotties/welcome.json'),
+          // Lottie.asset('assets/lotties/welcome.json'),
+          HeroWidget(title: 'Flutter Mapp'),
           Container(
             width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: 10.0),
